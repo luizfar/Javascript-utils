@@ -9,7 +9,7 @@ function prepareElementsWithTitle(elements) {
       copyTitleToVal($(this));
     })
     .focus(function() {
-      $(this).val("");
+      $(this).val("").removeClass("fadeFieldColor");
     })
     .blur(function() {
       text = jQuery.trim($(this).val());
@@ -20,5 +20,5 @@ function prepareElementsWithTitle(elements) {
 }
 
 function copyTitleToVal(element) {
-  element.val(element.attr("title")).css("color", "#ccc");
+  element.val(element.attr("title")).addClass("fadeFieldColor");
 }
