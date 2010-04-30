@@ -7,6 +7,10 @@ function prepareElementsWithTitle(elements) {
   elements
     .each(function() {
       copyTitleToValueIfEmpty($(this));
+      var element = $(this);
+      $(element.parents("form:first")).submit(function() {
+    	clearIfHasTitle(element)
+      })
     })
     .change(function() {
       copyTitleToValueIfEmpty($(this));
