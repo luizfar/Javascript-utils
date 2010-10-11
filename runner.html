@@ -1,0 +1,18 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" title="Username" name="username" id="username"/>
+    <br/>
+    <textarea title="Description" name="description"></textarea>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jsUtils.js"></script>
+    <script type="text/javascript">
+      $(window).load(function() {
+        jsUtils.bindWithTitle($("input[title]"));
+        jsUtils.bindWithTitle($("textarea[title]"));
+      });
+    </script>
+  </body>
+</html>
