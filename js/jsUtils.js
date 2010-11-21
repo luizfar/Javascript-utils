@@ -1,7 +1,7 @@
 var jsUtils = function() {
   
   function copyTitleToValueIfEmpty(element) {
-    text = jQuery.trim(element.val());
+    var text = jQuery.trim(element.val());
     if (text == "" || text == element.attr("title")) {
       element.val(element.attr("title")).addClass("fadeFieldColor");
     } else {
